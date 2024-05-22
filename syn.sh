@@ -1,0 +1,1 @@
+rsync . isaachyw@login.engin.umich.edu:~/lab1
