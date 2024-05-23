@@ -76,7 +76,8 @@ module arbiterFSM(
     //////////////////////////////////////////////////////
     // TODO: Caculate the output (grant) here           //
     //////////////////////////////////////////////////////
-    assign grant[2] = (state == GRANT_0 && request[0] == 1'b1) ? 1'b1 : 1'b0;
-    assign grant[1] = (state == GRANT_1 && request[1] == 1'b1) ? 1'b1 : 1'b0;
-    assign grant[0] = (state == GRANT_2 && request[2] == 1'b1) ? 1'b1 : 1'b0;
+    assign grant = (state==2'b11 ? 3'b100 : (state==2'b10 ? 3'b010 : (state==2'b01 ? 3'b001 : 3'b000))) & request;
+    // assign grant[2] = (state == GRANT_0 && request[0] == 1'b1) ? 1'b1 : 1'b0;
+    // assign grant[1] = (state == GRANT_1 && request[1] == 1'b1) ? 1'b1 : 1'b0;
+    // assign grant[0] = (state == GRANT_2 && request[2] == 1'b1) ? 1'b1 : 1'b0;
 endmodule
