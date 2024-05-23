@@ -1,5 +1,5 @@
 `timescale 1ns/100ps
-#define DEBUG_OUT 
+`define DEBUG_OUT 
 
 module fsm_ab(
 		input clock, reset, in,
