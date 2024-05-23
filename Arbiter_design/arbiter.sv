@@ -21,9 +21,13 @@ module arbiterFSM(
 
     always_ff @(posedge clock, posedge reset) begin
         //////////////////////////////////////////////////////
-        // TODO: Update the state here                      //
+        // TODO: Update the state here  
+        if  (reset) begin
+            state <= IDLE;
+        end else    begin             
         //////////////////////////////////////////////////////
-        state <= state_next;
+            state <= state_next;
+        end
     end
     
     always_comb begin
