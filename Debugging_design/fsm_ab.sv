@@ -38,13 +38,13 @@ module fsm_ab(
 	end
 
     assign out = (state == 2'b11) ? 1 : 0;
-	
+
 	always_ff @(posedge clock) begin
 		if(reset) begin
-			state <= 2'b00;
+			state <= #1 2'b00;
 		end
 		else begin
-			state <= next_state;
+			state <= #1 next_state;
 		end
 	end
 
