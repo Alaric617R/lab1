@@ -43,10 +43,10 @@ module fsm_ab(
 
 	always_ff @(posedge clock) begin
 		if(reset) begin
-			state = 2'b00;
+			state <= 2'b00;
 		end
 		else begin
-			state = next_state;
+			state <= next_state;
 		end
 	end
 
