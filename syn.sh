@@ -1,1 +1,3 @@
-rsync . isaachyw@login.engin.umich.edu:~/lab1
+git add .;
+git commit -m "update"
+git push origin master
