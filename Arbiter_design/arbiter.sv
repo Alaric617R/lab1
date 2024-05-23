@@ -24,7 +24,7 @@ module arbiterFSM(
         // TODO: Update the state here  
         if  (reset) begin
             state <= IDLE;
-        end else    begin             
+        end else begin             
         //////////////////////////////////////////////////////
             state <= state_next;
         end

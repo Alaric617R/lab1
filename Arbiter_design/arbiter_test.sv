@@ -82,7 +82,7 @@ module testbench;
         // Test 2
         request = 3'b011;
         @(negedge clock)
-        CHECK_GRANT( 3'b010 ); // state = 2
+        CHECK_GRANT( 3'b010 ); // state = 3
         @(negedge clock)
         CHECK_GRANT( 3'b001 );
 

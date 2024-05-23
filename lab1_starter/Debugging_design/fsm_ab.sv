@@ -21,10 +21,12 @@ module fsm_ab(
 			2'b00: begin
 				out = 0;
 				if(in) next_state = 2'b01;
+				else next_state = 2'b00;
 			end
 			2'b01: begin
 				out = 0;
 				if(!in) next_state = 2'b10;
+				else next_state = 2'b01;
 			end
 			2'b10: begin
 				out = 0;
