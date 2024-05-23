@@ -75,14 +75,14 @@ module testbench;
         @(negedge clock)
         CHECK_GRANT( 3'b100 );
         @(negedge clock)
-        CHECK_GRANT( 3'b010 );
+        CHECK_GRANT( 3'b010 ); // state = 2
         @(negedge clock)
-        CHECK_GRANT( 3'b001 );
+        CHECK_GRANT( 3'b001 ); // state = 1
 
         // Test 2
         request = 3'b011;
         @(negedge clock)
-        CHECK_GRANT( 3'b010 );
+        CHECK_GRANT( 3'b010 ); // state = 2
         @(negedge clock)
         CHECK_GRANT( 3'b001 );
 

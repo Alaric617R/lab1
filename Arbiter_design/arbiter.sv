@@ -48,6 +48,7 @@ module arbiterFSM(
             end
             GRANT_0: begin
                 if (request[0] == 1'b1) begin
+                    print("here!");
                     state_next = GRANT_2;
                 end else if (request[1] == 1'b1 && request[0] == 1'b0) begin
                     state_next = GRANT_1;
