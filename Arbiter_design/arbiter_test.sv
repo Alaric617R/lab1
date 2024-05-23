@@ -61,8 +61,8 @@ module testbench;
 
     initial begin
         $display("STARTING TESTBENCH!\n");
-        $monitor("Time:%4.0f clock:%b reset:%b request:%b grant:%b correct:%b expected:%b", 
-                 $time, clock, reset, request, grant, correct, expected);
+        $monitor("Time:%4.0f clock:%b reset:%b request:%b grant:%b correct:%b state: %p", 
+                 $time, clock, reset, request, grant, correct, a1_state);
 
         clock = 1'b0;
         reset = 1'b1;
