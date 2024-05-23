@@ -19,28 +19,26 @@ module fsm_ab(
 	always_comb begin
 		case(state)
 			2'b00: begin
-				out = 0;
 				if(in) next_state = 2'b01;
 				else next_state = 2'b00;
 			end
 			2'b01: begin
-				out = 0;
 				if(!in) next_state = 2'b10;
 				else next_state = 2'b01;
 			end
 			2'b10: begin
-				out = 0;
 				if(in) next_state = 2'b11;
 				else next_state = 2'b00;
 			end
 			2'b11: begin
-				out = 1;
 				if(in) next_state = 2'b01;
 				else next_state = 2'b10;
 			end
 		endcase
 	end
 
+    assign out = (state == 2'b11) ? 1 : 0;
+	
 	always_ff @(posedge clock) begin
 		if(reset) begin
 			state <= 2'b00;
