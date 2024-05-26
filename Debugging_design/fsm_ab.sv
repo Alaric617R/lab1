@@ -5,7 +5,7 @@ module fsm_ab(
 		input clock, reset, in,
 		output logic out
 		`ifdef DEBUG_OUT
-		, output state_out
+		, output [1:0] state_out
 		`endif
 	);
 
