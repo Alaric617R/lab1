@@ -32,7 +32,7 @@ module testbench;
             $display("@@@ Incorrect at time %4.0f", $time);
             $display("@@@ Time:%4.0f clock:%b reset:%h  state=%b  request:%b grant:%b correct:%b expected:%b", $time, clock, reset, a1_state, request, grant, correct, EXPECTED_OUT());
             $display("ENDING TESTBENCH : ERROR !");
-            $finish;
+            // $finish;
 		end
 	endtask
 
