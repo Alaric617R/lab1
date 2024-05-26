@@ -106,7 +106,9 @@ module testbench;
             //////////////////////////////////////////////////////
             // TODO: Implement a series of random test cases    //
             //////////////////////////////////////////////////////
-            
+            request = $random;
+            @(negedge clock)
+            CHECK_GRANT( EXPECTED_OUT() );
 		end
         
         $display("ENDING TESTBENCH : SUCCESS !\n");
