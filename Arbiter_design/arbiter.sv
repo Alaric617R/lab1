@@ -68,10 +68,13 @@ module arbiterFSM(
             GRANT_2: begin
                 $display("GRANT_2 req: %b", request);
                 if (request[2] == 1'b1 && request[1] == 1'b0) begin
+                    $display("grant0");
                     state_next = GRANT_0;
                 end else if (request[1] == 1'b1) begin
+                    $display("grant1");
                     state_next = GRANT_1;
                 end else  begin
+                    $display("grant2");
                     state_next = GRANT_2;
                 end
             end
